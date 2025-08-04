@@ -13,6 +13,14 @@ class Day7TextField extends StatelessWidget {
           TextField(decoration: InputDecoration(border: OutlineInputBorder())),
           Row(children: [Text("Jurusan")]),
           TextFormField(),
+          ListTile(
+            title: Text("Hobi"),
+            subtitle: Text("Pilih hobi anda"),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Action when tapped
+            },
+          ),
         ],
       ),
     );
