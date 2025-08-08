@@ -61,16 +61,19 @@ class PageB extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+         
+          const SizedBox(height: 20),
           Center(
             child: ElevatedButton(
               onPressed: () {
-                // Ganti Halaman B dengan Halaman C (B hilang, A masih ada)
-                Navigator.pushReplacement(
-                  context,  
+                // Hapus semua halaman sebelumnya (A & B hilang)
+                Navigator.pushAndRemoveUntil(
+                  context,
                   MaterialPageRoute(builder: (context) => const PageC()),
+                  (Route<dynamic> route) => false,
                 );
               },
-              child: const Text('Ke Halaman C (pushReplacement)'),
+              child: const Text('Ke Halaman C (pushAndRemoveUntil)'),
             ),
           ),
         ],
