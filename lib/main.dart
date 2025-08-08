@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ppkd_b_3/day_9/form.dart';
+import 'package:ppkd_b_3/day_11/navpop.dart';
+import 'package:ppkd_b_3/day_11/navpushRep.dart';
+
+import 'day_11/navpush.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
       ),
-      home: Day9Form(),
+      home: PushAndRemUn(),
 
       ///TEST
     );
